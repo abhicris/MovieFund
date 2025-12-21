@@ -15,11 +15,12 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      // Handle Docusaurus clean URLs (without .html extension)
-      // Docusaurus generates /docs/PageName/index.html for /docs/PageName routes
+      // Handle Docusaurus clean URLs
+      // Docusaurus generates /docs/PageName/index.html for /docs/PageName/ routes
+      // This rewrite handles requests without trailing slash
       {
-        source: '/docs/:path*',
-        destination: '/docs/:path*/index.html',
+        source: '/docs/:path((?!.*\\.).*)',
+        destination: '/docs/:path/index.html',
       },
     ];
   },

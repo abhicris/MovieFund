@@ -11,7 +11,7 @@ const config: Config = {
   url: 'https://moviebitfund.kcolbchain.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   baseUrl: '/docs/',
-  trailingSlash: false,
+  trailingSlash: true, // Use trailing slashes for better Next.js compatibility
 
   // GitHub pages deployment config.
   organizationName: 'abhicris',
