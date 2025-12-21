@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:docs": "cd docs-site && npm install && npm run build && cd .. && mkdir -p public/docs && cp -r docs-site/build/* public/docs/",
+    "build:all": "npm run build:docs && npm run build",
     "start": "next start",
     "lint": "next lint"
   },

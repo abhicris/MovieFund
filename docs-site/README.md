@@ -1,12 +1,22 @@
 # MovieFund Documentation Site
 
-This is the Docusaurus documentation site for MovieFund.
+This is the Docusaurus documentation site for MovieFund. It provides a professional, searchable documentation experience for all MovieFund documentation.
 
-## Getting Started
+## Features
+
+- 📚 Organized documentation with sidebar navigation
+- 🔍 Built-in search (can be enhanced with Algolia)
+- 📱 Mobile-responsive design
+- 🌙 Dark mode support
+- ⚡ Fast static site generation
+- 🔗 Easy linking between documents
+
+## Quick Start
 
 ### Installation
 
 ```bash
+cd docs-site
 npm install
 ```
 
@@ -16,7 +26,7 @@ npm install
 npm start
 ```
 
-This starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+This starts a local development server at `http://localhost:3000`
 
 ### Build
 
@@ -24,14 +34,53 @@ This starts a local development server and opens up a browser window. Most chang
 npm run build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Generates static files in the `build/` directory.
 
-### Deployment
+## Documentation Structure
 
-The site can be deployed to Vercel, Netlify, or any static hosting service.
+All documentation is organized into categories:
 
-For Vercel:
-1. Connect the repository
-2. Set build command: `cd docs-site && npm install && npm run build`
-3. Set output directory: `docs-site/build`
-4. Set base path: `/docs`
+- **Business & Strategy**: CEO roadmap, business model, platform plan
+- **Operations**: Movie operations, legal agreements, partnerships
+- **Marketing & Launch**: Marketing strategy and launch plans
+- **Development**: Developer roadmap, demo status
+
+## Deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+### Quick Deploy to Vercel
+
+1. Create new Vercel project
+2. Set root directory to `docs-site`
+3. Build command: `npm install && npm run build`
+4. Output directory: `build`
+5. Deploy!
+
+## Configuration
+
+- **Config**: `docusaurus.config.ts`
+- **Sidebar**: `sidebars.ts`
+- **Styling**: `src/css/custom.css`
+
+## Adding New Docs
+
+1. Add markdown file to `docs/` directory
+2. Add frontmatter with `sidebar_position`
+3. Update `sidebars.ts` to include in navigation
+
+## Updating Investor Deck
+
+When your Gamma presentation is ready, update `sidebars.ts`:
+
+```typescript
+{
+  type: 'link',
+  label: 'Investor Deck',
+  href: 'https://gamma.app/your-link',
+},
+```
+
+---
+
+*Built with [Docusaurus](https://docusaurus.io/)*

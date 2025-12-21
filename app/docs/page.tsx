@@ -1,9 +1,8 @@
-import { redirect } from 'next/navigation';
-
+// Docusaurus docs are served as static files from public/docs/
+// This page component is not needed as static files are served directly
+// But we keep it for the route to exist
 export default function DocsPage() {
-  // Redirect to Docusaurus docs site
-  // Update this URL once docs site is deployed
-  redirect('https://docs.moviebitfund.kcolbchain.com');
+  return null;
 }
 
 type DocItem = 
