@@ -334,7 +334,7 @@ RPC_URL=...
 
 ### Public APIs
 - `GET /api/movies` - List movies
-- `GET /api/movies/[id]` - Get movie details
+- `GET /api/movies/\[id\]` - Get movie details
 - `POST /api/auth/register` - User registration
 - `POST /api/auth/login` - User login
 
@@ -347,8 +347,8 @@ RPC_URL=...
 
 ### Admin APIs
 - `POST /api/admin/movies` - Create movie
-- `PUT /api/admin/movies/[id]` - Update movie
-- `POST /api/admin/movies/[id]/approve` - Approve movie
+- `PUT /api/admin/movies/\[id\]` - Update movie
+- `POST /api/admin/movies/\[id\]/approve` - Approve movie
 - `GET /api/admin/submissions` - Get submissions
 - `GET /api/admin/users` - Get users
 
