@@ -53,8 +53,6 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-**Note**: The platform works perfectly fine without TMDB API key - it will use mock data. TMDB integration is optional for enhanced movie information and images.
-
 ### Build for Production
 
 ```bash
