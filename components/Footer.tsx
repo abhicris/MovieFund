@@ -60,8 +60,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-black pt-8">
-          <p className="text-xs font-light text-black text-center">
+          <p className="text-xs font-light text-black text-center mb-2">
             © {new Date().getFullYear()} MovieFund. All rights reserved.
+          </p>
+          <p className="text-xs font-light text-black text-center opacity-70">
+            Alpha Testnet Version • Blockchain ledger integration coming soon
           </p>
         </div>
       </div>
