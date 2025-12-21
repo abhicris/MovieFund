@@ -12,11 +12,13 @@ export const platformStats: PlatformStats = {
 
 // Helper function to format currency
 export function formatCurrency(amount: number): string {
+  // Force USD formatting regardless of browser locale
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
-    maximumFractionDigits: 0,
     currencyDisplay: "symbol",
+    maximumFractionDigits: 0,
+    minimumFractionDigits: 0,
   }).format(amount);
 }
 
