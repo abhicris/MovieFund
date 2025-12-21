@@ -35,12 +35,22 @@ A modern alternative investment platform for fractional ownership of movies. Inv
 npm install
 ```
 
-2. Run the development server:
+2. (Optional) Set up TMDB API for real movie data:
+   - Get a free API key from [TMDB](https://www.themoviedb.org/settings/api)
+   - Create `.env.local` file:
+   ```bash
+   NEXT_PUBLIC_TMDB_API_KEY=your_api_key_here
+   ```
+   - See [TMDB_SETUP.md](./TMDB_SETUP.md) for detailed instructions
+
+3. Run the development server:
 ```bash
 npm run dev
 ```
 
-3. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+**Note**: The platform works perfectly fine without TMDB API key - it will use mock data. TMDB integration is optional for enhanced movie information and images.
 
 ### Build for Production
 
