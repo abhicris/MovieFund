@@ -15,11 +15,12 @@ const nextConfig = {
   },
   async rewrites() {
     return [
-      // Handle Docusaurus clean URLs - serve index.html for directory routes
-      // Matches /docs/PageName (no extension) and serves /docs/PageName/index.html
+      // Handle Docusaurus clean URLs
+      // For routes like /docs/PageName, serve /docs/PageName/index.html
+      // Only apply to paths that don't already have a file extension
       {
-        source: '/docs/:path*',
-        destination: '/docs/:path*/index.html',
+        source: '/docs/:path((?!.*\\.[^/]+$).*)',
+        destination: '/docs/:path/index.html',
       },
     ];
   },
