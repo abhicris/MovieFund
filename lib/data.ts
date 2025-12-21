@@ -92,10 +92,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(50000000), // $50,000 per lot
     projectedROI: 38.5,
     images: [
-      "https://image.tmdb.org/t/p/w1280/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
-      "https://image.tmdb.org/t/p/w1280/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
+      "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=1280&q=80",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+    poster: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=800&q=80",
     description: "A sequel to the 2019 blockbuster 'War', featuring Hrithik Roshan reprising his role as Major Kabir Dhaliwal, alongside Jr. NTR making his Bollywood debut. An action-packed spy thriller with high-octane sequences.",
     cast: ["Hrithik Roshan", "Jr. NTR", "Kiara Advani", "Ashutosh Rana"],
     releaseDate: new Date("2026-08-14"),
@@ -133,10 +133,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(35000000), // $35,000 per lot
     projectedROI: 42.2,
     images: [
-      "https://image.tmdb.org/t/p/w1280/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
-      "https://image.tmdb.org/t/p/w1280/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+      "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1280&q=80",
+      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80",
     description: "An action-packed entertainer featuring Salman Khan in a dual role, marking his collaboration with director A.R. Murugadoss. A high-stakes thriller with intense action sequences.",
     cast: ["Salman Khan", "Rashmika Mandanna", "Suniel Shetty", "Pooja Hegde"],
     releaseDate: new Date("2026-04-15"),
@@ -174,10 +174,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(25000000), // $25,000 per lot
     projectedROI: 36.8,
     images: [
-      "https://image.tmdb.org/t/p/w1280/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
-      "https://image.tmdb.org/t/p/w1280/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1280&q=80",
+      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/2CAL2433ZeIihfX1Hb2139CX0pW.jpg",
+    poster: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80",
     description: "The fifth installment in the popular comedy franchise, bringing together actors from all previous 'Housefull' films for a grand ensemble cast. A hilarious comedy of errors.",
     cast: ["Akshay Kumar", "Riteish Deshmukh", "Abhishek Bachchan", "Sanjay Dutt", "Jacqueline Fernandez", "Kriti Sanon"],
     releaseDate: new Date("2026-06-06"),
@@ -257,10 +257,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(3500000), // $3,500 per lot
     projectedROI: 44.5,
     images: [
-      "https://image.tmdb.org/t/p/w1280/3KvQIMhE38L4HHf5aTUA2vT3n9R.jpg",
-      "https://image.tmdb.org/t/p/w1280/4LmN5pQrT8vN9sW2xY6zB7cD8eF.jpg",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1280&q=80",
+      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/3KvQIMhE38L4HHf5aTUA2vT3n9R.jpg",
+    poster: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
     description: "A poignant drama following Marina, a young woman seeking the truth about her deceased biological father. Premiered at the 78th Cannes Film Festival.",
     cast: ["Llúcia Garcia", "Aina Clotet", "Jordi Pujol Dolcet"],
     releaseDate: new Date("2026-05-15"),
@@ -298,10 +298,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(2800000), // $2,800 per lot
     projectedROI: 41.8,
     images: [
-      "https://image.tmdb.org/t/p/w1280/5MpN9qR2vT6wX8yZ3bC4dE5fG6h.jpg",
-      "https://image.tmdb.org/t/p/w1280/6NqO4sE7fU9xY2aD5gH8iJ0kL1m.jpg",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1280&q=80",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/5MpN9qR2vT6wX8yZ3bC4dE5fG6h.jpg",
+    poster: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
     description: "A moving drama about Maria Angeles, who fights to keep her childhood home in Morocco after her daughter decides to sell it. Premiered at the 82nd Venice International Film Festival.",
     cast: ["Carmen Maura", "Lubna Azabal", "Ayoub El Hilali"],
     releaseDate: new Date("2026-04-20"),
@@ -339,10 +339,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(4200000), // $4,200 per lot
     projectedROI: 39.5,
     images: [
-      "https://image.tmdb.org/t/p/w1280/7OrP5qS8tU0xY3bE6gI9jK1lM2n.jpg",
-      "https://image.tmdb.org/t/p/w1280/8PsQ6rT9vV1yZ4cF7hJ0kL2mN3o.jpg",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1280&q=80",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/7OrP5qS8tU0xY3bE6gI9jK1lM2n.jpg",
+    poster: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
     description: "A gripping thriller about 45-year-old Nina returning to her seaside hometown to seek revenge on the man who ruined her life thirty years prior.",
     cast: ["Patricia López Arnaiz", "Darío Grandinetti", "Elena Irureta"],
     releaseDate: new Date("2026-06-10"),
@@ -380,10 +380,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(2200000), // $2,200 per lot
     projectedROI: 43.2,
     images: [
-      "https://image.tmdb.org/t/p/w1280/9QtR7sU1wX2yZ5dG8iJ1lM3nO4p.jpg",
-      "https://image.tmdb.org/t/p/w1280/0RuS8tV2xY3aE9hK2lM4nO5pQ6r.jpg",
+      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1280&q=80",
+      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/9QtR7sU1wX2yZ5dG8iJ1lM3nO4p.jpg",
+    poster: "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=800&q=80",
     description: "A romantic comedy following Eric, who after robbing a bank, tricks his dating app match Vera into becoming his driver during his escape from Madrid to Galicia.",
     cast: ["Óscar Casas", "Ana Jara", "María Botto"],
     releaseDate: new Date("2026-03-15"),
@@ -422,10 +422,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(200000000), // $200,000 per lot
     projectedROI: 32.5,
     images: [
-      "https://image.tmdb.org/t/p/w1280/1SuP3rV4xY4bF0hK3lM5nO6pQ7s.jpg",
-      "https://image.tmdb.org/t/p/w1280/2TvQ4sW5yZ5dG9iJ2lM6nO7pR8t.jpg",
+      "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1280&q=80",
+      "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/1SuP3rV4xY4bF0hK3lM5nO6pQ7s.jpg",
+    poster: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&q=80",
     description: "A fresh take on the iconic superhero, exploring Superman's journey to reconcile his alien heritage with his human upbringing. Directed by James Gunn.",
     cast: ["David Corenswet", "Rachel Brosnahan", "Nicholas Hoult", "Isabela Merced"],
     releaseDate: new Date("2026-07-11"),
@@ -463,10 +463,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(290000000), // $290,000 per lot
     projectedROI: 34.8,
     images: [
-      "https://image.tmdb.org/t/p/w1280/3UvR5tW6yZ6dG0hK4lM7nO8pS9u.jpg",
-      "https://image.tmdb.org/t/p/w1280/4VwS6tX7yZ7dG1hK5lM8nO9pT0v.jpg",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1280&q=80",
+      "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/3UvR5tW6yZ6dG0hK4lM7nO8pS9u.jpg",
+    poster: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&q=80",
     description: "Ethan Hunt returns for another high-stakes mission in the final chapter of the Mission: Impossible franchise. Death-defying stunts and intense action sequences.",
     cast: ["Tom Cruise", "Hayley Atwell", "Ving Rhames", "Simon Pegg", "Rebecca Ferguson"],
     releaseDate: new Date("2026-05-23"),
@@ -504,10 +504,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(350000000), // $350,000 per lot
     projectedROI: 31.2,
     images: [
-      "https://image.tmdb.org/t/p/w1280/5WxS7tY8yZ8dG2hK6lM9nO0pU1w.jpg",
-      "https://image.tmdb.org/t/p/w1280/6XyS8tZ9yZ9dG3hK7lM0nO1pV2x.jpg",
+      "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1280&q=80",
+      "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/5WxS7tY8yZ8dG2hK6lM9nO0pU1w.jpg",
+    poster: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&q=80",
     description: "Continues the epic saga on Pandora with groundbreaking visual effects and immersive storytelling. The next chapter in James Cameron's visionary franchise.",
     cast: ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver", "Stephen Lang"],
     releaseDate: new Date("2027-12-19"),
@@ -545,10 +545,10 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(45000000), // $45,000 per lot
     projectedROI: 37.5,
     images: [
-      "https://image.tmdb.org/t/p/w1280/7YzS9tZ0yZ0dG4hK8lM1nO2pW3y.jpg",
-      "https://image.tmdb.org/t/p/w1280/8ZzS0tZ1yZ1dG5hK9lM2nO3pX4z.jpg",
+      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1280&q=80",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1280&q=80",
     ],
-    poster: "https://image.tmdb.org/t/p/w500/7YzS9tZ0yZ0dG4hK8lM1nO2pW3y.jpg",
+    poster: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
     description: "Detective Benoit Blanc tackles a new mystery in this third installment of the Knives Out series. A clever whodunit with sharp wit and unexpected twists.",
     cast: ["Daniel Craig", "Josh O'Connor", "Cailee Spaeny", "Andrew Scott", "Kerry Washington"],
     releaseDate: new Date("2026-09-15"),

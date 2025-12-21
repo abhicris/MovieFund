@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { mockMovies } from '@/lib/data';
+import { MovieGenre, MovieLanguage } from '@/types';
 
 // Public API endpoint for fetching movies (for frontend)
 export async function GET(request: Request) {
@@ -15,10 +16,16 @@ export async function GET(request: Request) {
     filteredMovies = filteredMovies.filter(m => m.status === status);
   }
   if (genre) {
-    filteredMovies = filteredMovies.filter(m => m.genre.includes(genre));
+    const genreFilter = genre as MovieGenre;
+    filteredMovies = filteredMovies.filter(m => 
+      m.genre.includes(genreFilter)
+    );
   }
   if (language) {
-    filteredMovies = filteredMovies.filter(m => m.language === language);
+    const languageFilter = language as MovieLanguage;
+    filteredMovies = filteredMovies.filter(m => 
+      m.language === languageFilter
+    );
   }
 
   return NextResponse.json({
