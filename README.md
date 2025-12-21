@@ -103,7 +103,7 @@ MovieFund/
 ## Key Features
 
 ### Fractional Investment
-Investors can purchase fractional shares of movies, allowing them to invest in films without the full capital requirement.
+Investors can purchase lots in movies (each lot represents 0.1% of the total budget). Each movie has 1000 lots available, and investors can purchase multiple lots based on their investment capacity.
 
 ### Revenue Sources
 Returns are generated from multiple revenue streams:
