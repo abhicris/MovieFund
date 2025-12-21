@@ -9,7 +9,7 @@ interface MovieCardProps {
 
 export default function MovieCard({ movie }: MovieCardProps) {
   const isFullyFunded = movie.status === "fully_funded";
-  const sharesRemaining = movie.availableShares;
+  const lotsRemaining = movie.availableLots;
 
   return (
     <div className="group bg-white border border-black overflow-hidden hover:bg-black transition-all duration-300">
@@ -62,9 +62,9 @@ export default function MovieCard({ movie }: MovieCardProps) {
           <div>
             <div className="text-xs text-black mb-2 font-light uppercase tracking-wider">Investment</div>
             <div className="text-xl font-light text-black">
-              {formatCurrency(movie.pricePerShare)}
+              {formatCurrency(movie.pricePerLot)}
             </div>
-            <div className="text-xs text-black font-light mt-1">/share</div>
+            <div className="text-xs text-black font-light mt-1">/lot</div>
           </div>
           <div className="text-right">
             <div className="text-xs text-black mb-2 font-light uppercase tracking-wider">ROI</div>
@@ -76,7 +76,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
         {!isFullyFunded && (
           <div className="mb-6">
             <div className="text-xs text-black font-light mb-2">
-              {sharesRemaining}/{movie.totalShares} shares remaining
+              {lotsRemaining}/{movie.totalLots} lots remaining
             </div>
             <div className="text-xs text-black font-light">Director: {movie.director}</div>
           </div>
@@ -84,7 +84,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
         {isFullyFunded && (
           <div className="mb-6">
             <div className="text-xs text-black font-light">
-              All shares are full
+              All lots are full
             </div>
           </div>
         )}

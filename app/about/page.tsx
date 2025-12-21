@@ -29,7 +29,7 @@ export default function AboutPage() {
                 companies. Each project undergoes thorough due diligence, including script 
                 review, director and cast evaluation, budget analysis, and revenue projections. 
                 Once approved, projects are listed on our platform where investors can purchase 
-                fractional shares.
+                fractional lots (each lot represents 0.1% of the movie's budget).
               </p>
             </section>
 

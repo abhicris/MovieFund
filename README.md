@@ -1,13 +1,13 @@
 # MovieFund - Fractional Movie Investment Platform
 
-A modern alternative investment platform for fractional ownership of movies. Investors can purchase shares in films and earn returns from box office, streaming, and distribution revenue.
+A modern alternative investment platform for fractional ownership of movies. Investors can purchase lots in films (each lot represents 0.1% of the movie's budget) and earn returns from box office, streaming, and distribution revenue.
 
 ## Features
 
 - **Movie Listings**: Browse available investment opportunities with detailed film information
-- **Fractional Investment**: Invest in movies by purchasing shares (fractional ownership)
+- **Fractional Investment**: Invest in movies by purchasing lots (each lot = 0.1% of budget, 1000 lots per movie)
 - **Returns Tracking**: View projected returns and track investment performance
-- **Real-time Availability**: See available shares and investment status
+- **Real-time Availability**: See available lots and investment status
 - **Investment Dashboard**: Manage your portfolio and track returns
 - **Genre Filtering**: Filter movies by genre, language, and status
 - **Revenue Projections**: Detailed breakdown of box office, streaming, and distribution revenue
@@ -89,14 +89,14 @@ MovieFund/
 
 ### Movie
 - Movie details (title, director, producer, cast, genre, language)
-- Investment details (price per share, total shares, available shares)
+- Investment details (price per lot, total lots: 1000, available lots)
 - Revenue projections (box office, streaming, distribution)
 - Returns projection (year 1-5)
 - Status (pre-production, production, post-production, completed, released, fully_funded)
 
 ### Investment
 - User investment records
-- Share ownership
+- Lot ownership (each lot = 0.1% of movie budget)
 - Returns earned
 - Payment status
 

@@ -28,7 +28,7 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
   }
 
   const isFullyFunded = movie.status === "fully_funded";
-  const fundingProgress = ((movie.totalShares - movie.availableShares) / movie.totalShares) * 100;
+  const fundingProgress = ((movie.totalLots - movie.availableLots) / movie.totalLots) * 100;
 
   return (
     <main className="min-h-screen bg-white">
@@ -82,8 +82,9 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
             <div className="border-t border-b border-black py-8 mb-8">
               <div className="grid grid-cols-2 gap-8 mb-8">
                 <div>
-                  <div className="text-xs text-black mb-2 font-light uppercase tracking-wider">Investment per Share</div>
-                  <div className="text-3xl font-light text-black">{formatCurrency(movie.pricePerShare)}</div>
+                  <div className="text-xs text-black mb-2 font-light uppercase tracking-wider">Price per Lot</div>
+                  <div className="text-3xl font-light text-black">{formatCurrency(movie.pricePerLot)}</div>
+                  <div className="text-xs text-black font-light mt-1">(0.1% of budget)</div>
                 </div>
                 <div>
                   <div className="text-xs text-black mb-2 font-light uppercase tracking-wider">Projected ROI</div>
@@ -96,7 +97,7 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
                   <div className="flex justify-between text-xs font-light text-black mb-2">
                     <span>Funding Progress</span>
                     <span>
-                      {movie.totalShares - movie.availableShares} / {movie.totalShares} shares
+                      {movie.totalLots - movie.availableLots} / {movie.totalLots} lots
                     </span>
                   </div>
                   <div className="w-full bg-white border border-black h-2">

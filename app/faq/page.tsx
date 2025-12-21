@@ -5,23 +5,23 @@ export default function FAQPage() {
   const faqs = [
     {
       question: "What is fractional movie investment?",
-      answer: "Fractional movie investment allows you to purchase shares in a film project. Instead of investing the full budget, you can invest a smaller amount and own a portion of the movie. Returns are distributed based on your share ownership.",
+      answer: "Fractional movie investment allows you to purchase lots in a film project. Each lot represents 0.1% of the movie's total budget. Instead of investing the full budget, you can invest in multiple lots and own a portion of the movie. Returns are distributed based on your lot ownership.",
     },
     {
       question: "What is the minimum investment?",
-      answer: "The minimum investment is typically $300 per share. Some movies may have different minimum investment requirements.",
+      answer: "The minimum investment is one lot, which equals 0.1% of the movie's budget. Lot prices vary by movie budget - smaller films may have lots priced at $2,000-$5,000, while blockbusters may have lots at $200,000-$350,000. You can purchase multiple lots.",
     },
     {
       question: "How do I earn returns?",
-      answer: "Returns are generated from multiple revenue sources: box office ticket sales, streaming platform licensing deals, and distribution revenue (international, home video, etc.). Returns are distributed to investors based on their share ownership.",
+      answer: "Returns are generated from multiple revenue sources: box office ticket sales, streaming platform licensing deals, and distribution revenue (international, home video, etc.). Returns are distributed to investors based on their lot ownership.",
     },
     {
       question: "What happens if a movie doesn't perform well?",
       answer: "Movie investment carries risks, and returns are not guaranteed. If a movie underperforms, investors may receive lower returns or no returns. We provide detailed risk disclosures and encourage investors to diversify their portfolio across multiple movies.",
     },
     {
-      question: "Can I sell my shares?",
-      answer: "Currently, shares are held until the movie is released and returns are distributed. We are working on a secondary market feature that will allow share trading in the future.",
+      question: "Can I sell my lots?",
+      answer: "Currently, lots are held until the movie is released and returns are distributed. We are working on a secondary market feature that will allow lot trading in the future.",
     },
     {
       question: "How long does it take to see returns?",

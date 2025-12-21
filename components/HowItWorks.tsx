@@ -7,8 +7,8 @@ export default function HowItWorks() {
     },
     {
       number: "02",
-      title: "Invest in Shares",
-      description: "Purchase fractional shares in movies that align with your investment goals. Minimum investment starts at $300 per share.",
+      title: "Invest in Lots",
+      description: "Purchase lots in movies that align with your investment goals. Each lot represents 0.1% of the movie's budget. You can buy multiple lots.",
     },
     {
       number: "03",
@@ -18,7 +18,7 @@ export default function HowItWorks() {
     {
       number: "04",
       title: "Earn Returns",
-      description: "Receive returns from box office revenue, streaming deals, and distribution income based on your share ownership.",
+      description: "Receive returns from box office revenue, streaming deals, and distribution income based on your lot ownership.",
     },
   ];
 

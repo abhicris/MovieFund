@@ -14,7 +14,7 @@ export default function Services() {
     },
     {
       title: "Low Entry Barrier",
-      description: "Start investing with as little as $300. Fractional ownership makes movie investment accessible to everyone.",
+      description: "Each lot represents 0.1% of the movie's budget. Invest in one or multiple lots based on your budget. Fractional ownership makes movie investment accessible to everyone.",
     },
   ];
 

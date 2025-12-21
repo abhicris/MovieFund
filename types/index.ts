@@ -11,7 +11,7 @@ export type MovieGenre =
   | "animation"
   | "fantasy";
 
-export type MovieLanguage = "hindi" | "english" | "tamil" | "telugu" | "malayalam" | "kannada" | "bengali" | "marathi";
+export type MovieLanguage = "hindi" | "english" | "spanish" | "tamil" | "telugu" | "malayalam" | "kannada" | "bengali" | "marathi";
 
 export interface Movie {
   id: string;
@@ -23,9 +23,9 @@ export interface Movie {
   genre: MovieGenre[];
   language: MovieLanguage;
   budget: number; // Total production budget
-  totalShares: number; // Total investment shares available
-  availableShares: number; // Available shares for investment
-  pricePerShare: number; // Investment price per share
+  totalLots: number; // Total investment lots available (always 1000)
+  availableLots: number; // Available lots for investment
+  pricePerLot: number; // Investment price per lot (0.1% of budget)
   projectedROI: number; // Percentage per annum
   images: string[];
   poster: string;
@@ -57,7 +57,7 @@ export interface Investment {
   id: string;
   userId: string;
   movieId: string;
-  shares: number;
+  lots: number;
   totalAmount: number;
   status: "reserved" | "confirmed" | "active" | "completed";
   reservedAt: Date;
