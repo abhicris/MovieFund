@@ -19,7 +19,18 @@ A modern alternative investment platform for fractional ownership of movies. Inv
 - **Styling**: Tailwind CSS
 - **UI Components**: Custom React components
 - **Charts**: Recharts for data visualization
-- **Movie Data**: TMDB API (optional, free) - See [TMDB_SETUP.md](./TMDB_SETUP.md)
+
+## Current Status: Alpha Demo Version
+
+This is a **refined demo version** with:
+- ✅ Fully functional frontend
+- ✅ Mock movie data (12 real movies)
+- ✅ Working build and deployment
+- ⏳ Backend and database (to be built later)
+- ⏳ Movie submission system (to be built later)
+- ⏳ Approval workflow (to be built later)
+
+See [DEMO_STATUS.md](./DEMO_STATUS.md) for details.
 
 ## Getting Started
 
@@ -35,15 +46,7 @@ A modern alternative investment platform for fractional ownership of movies. Inv
 npm install
 ```
 
-2. (Optional) Set up TMDB API for real movie data:
-   - Get a free API key from [TMDB](https://www.themoviedb.org/settings/api)
-   - Create `.env.local` file:
-   ```bash
-   NEXT_PUBLIC_TMDB_API_KEY=your_api_key_here
-   ```
-   - See [TMDB_SETUP.md](./TMDB_SETUP.md) for detailed instructions
-
-3. Run the development server:
+2. Run the development server:
 ```bash
 npm run dev
 ```
