@@ -643,13 +643,13 @@ CREATE TABLE documents (
 - ✅ Investments can be processed
 - ✅ Payments working
 - ✅ Investment tracking accurate
-- ✅ <1% payment failure rate
+- ✅ Less than 1% payment failure rate
 
 ### Phase 3 Success
 - ✅ Movies can be submitted
 - ✅ Admin can approve/reject
 - ✅ Document management working
-- ✅ <24hr approval turnaround
+- ✅ Less than 24hr approval turnaround
 
 ### Phase 4 Success
 - ✅ Returns calculated accurately

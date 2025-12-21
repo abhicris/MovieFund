@@ -18,7 +18,9 @@ const config: Config = {
   projectName: 'MovieFund',
 
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    mermaid: true,
+  },
 
   i18n: {
     defaultLocale: 'en',
