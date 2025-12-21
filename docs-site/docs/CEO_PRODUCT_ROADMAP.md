@@ -1,9 +1,6 @@
 ---
 sidebar_position: 1
 ---
----
-sidebar_position: 1
----
 
 # CEO & Product Roadmap - MovieFund Launch
 

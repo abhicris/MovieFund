@@ -1,93 +1,55 @@
 # Docusaurus Documentation Site Deployment
 
-## Option 1: Deploy as Separate Vercel Project (Recommended)
+## Integrated Deployment (Same Vercel Project)
 
-1. Create a new Vercel project for the docs site
-2. Connect the `docs-site` directory
-3. Configure:
-   - **Root Directory**: `docs-site`
-   - **Build Command**: `npm install && npm run build`
-   - **Output Directory**: `build`
-   - **Install Command**: `npm install`
-4. Set custom domain: `docs.moviebitfund.kcolbchain.com`
+The docs site is now integrated into the main Next.js project and will be deployed together.
 
-## Option 2: Deploy as Subdirectory (Monorepo)
+### How It Works
 
-1. Update `vercel.json` in root:
-```json
-{
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    },
-    {
-      "src": "docs-site/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/docs/(.*)",
-      "dest": "/docs-site/$1"
-    }
-  ]
-}
-```
+1. **Build Process**: When Vercel builds your project, it runs `npm run build:all`
+2. **Docs Build**: This builds the Docusaurus site in `docs-site/`
+3. **Copy to Public**: The build output is copied to `public/docs/`
+4. **Serving**: Next.js automatically serves static files from `public/` at the `/docs` path
 
-2. Update `docs-site/docusaurus.config.ts`:
-```typescript
-baseUrl: '/docs/',
-```
+### No Separate Project Needed
 
-## Option 3: Deploy to Netlify
+✅ **You do NOT need a separate Vercel project**  
+✅ Everything is in one repository  
+✅ One deployment, one domain  
 
-1. Create `netlify.toml`:
-```toml
-[build]
-  base = "docs-site"
-  command = "npm install && npm run build"
-  publish = "build"
+### Build Commands
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-```
+The root `package.json` includes:
+- `build:docs` - Builds only the docs site
+- `build:all` - Builds docs then Next.js app
 
-2. Connect to Netlify and deploy
+Vercel uses `build:all` automatically.
 
-## Local Development
+### Accessing Docs
+
+Once deployed, visit:
+- `https://moviebitfund.kcolbchain.com/docs` - Main docs page
+- `https://moviebitfund.kcolbchain.com/docs/CEO_PRODUCT_ROADMAP` - Individual docs
+
+### Local Development
 
 ```bash
+# Build and serve docs locally
 cd docs-site
 npm install
 npm start
+# Visit http://localhost:3000
+
+# Or build and copy to public for Next.js
+npm run build:docs
+npm run dev
+# Visit http://localhost:3000/docs
 ```
 
-Visit `http://localhost:3000` to see the docs site.
+### Troubleshooting
 
-## Adding New Documentation
-
-1. Add markdown files to `docs-site/docs/`
-2. Update `docs-site/sidebars.ts` to include new files
-3. Add frontmatter to markdown files:
-```markdown
----
-sidebar_position: 1
----
-```
-
-## Updating Investor Deck Link
-
-Edit `docs-site/sidebars.ts` and update the Investor Deck link:
-```typescript
-{
-  type: 'link',
-  label: 'Investor Deck',
-  href: 'https://gamma.app/your-link',
-},
-```
+If docs don't appear:
+1. Check that `public/docs/` exists after build
+2. Verify `baseUrl: '/docs/'` in `docusaurus.config.ts`
+3. Check Vercel build logs for errors
+4. Ensure `build:all` script runs successfully
