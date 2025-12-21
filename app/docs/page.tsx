@@ -147,34 +147,36 @@ export default function DocsPage() {
                       <p className="text-sm text-gray-600 font-light mb-4 leading-relaxed">
                         {doc.description}
                       </p>
-                      {'comingSoon' in doc && doc.comingSoon ? (
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
-                            Coming Soon
-                          </span>
-                          {'link' in doc && doc.link && doc.link !== "#" && (
-                            <a
-                              href={doc.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-sm text-green-600 hover:text-green-700 font-light"
-                            >
-                              View Deck →
-                            </a>
-                          )}
-                        </div>
-                      ) : 'external' in doc && doc.external ? (
-                        <a
-                          href={'link' in doc ? doc.link : '#'}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-green-600 hover:text-green-700 font-light inline-flex items-center gap-1"
-                        >
-                          View Document →
-                        </a>
+                      {doc.file === null ? (
+                        doc.comingSoon ? (
+                          <div className="flex items-center gap-2">
+                            <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
+                              Coming Soon
+                            </span>
+                            {doc.link && doc.link !== "#" && (
+                              <a
+                                href={doc.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-sm text-green-600 hover:text-green-700 font-light"
+                              >
+                                View Deck →
+                              </a>
+                            )}
+                          </div>
+                        ) : (
+                          <a
+                            href={doc.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-sm text-green-600 hover:text-green-700 font-light inline-flex items-center gap-1"
+                          >
+                            View Document →
+                          </a>
+                        )
                       ) : (
                         <a
-                          href={`https://github.com/abhicris/MovieFund/blob/main/${'file' in doc && doc.file ? doc.file : ''}`}
+                          href={`https://github.com/abhicris/MovieFund/blob/main/${doc.file}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm text-green-600 hover:text-green-700 font-light inline-flex items-center gap-1"
