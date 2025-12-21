@@ -15,9 +15,11 @@ const nextConfig = {
   },
   async rewrites() {
     return [
+      // Handle Docusaurus clean URLs (without .html extension)
+      // Docusaurus generates /docs/PageName/index.html for /docs/PageName routes
       {
         source: '/docs/:path*',
-        destination: '/docs/:path*',
+        destination: '/docs/:path*/index.html',
       },
     ];
   },
