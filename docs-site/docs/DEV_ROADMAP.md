@@ -661,7 +661,7 @@ CREATE TABLE documents (
 - ✅ All investments on-chain
 - ✅ Returns recorded on-chain
 - ✅ Blockchain queries working
-- ✅ <$1 per transaction cost
+- ✅ Less than $1 per transaction cost
 
 ---
 

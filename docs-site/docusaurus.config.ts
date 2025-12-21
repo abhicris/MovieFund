@@ -35,6 +35,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
           editUrl: 'https://github.com/abhicris/MovieFund/tree/main/',
+          remarkPlugins: [],
+          rehypePlugins: [],
         },
         blog: false,
         theme: {
