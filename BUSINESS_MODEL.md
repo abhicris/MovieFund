@@ -333,4 +333,4 @@ MovieFund operates as a fractional movie investment platform that connects inves
 
 ---
 
-*Last Updated: 2024*
+*Last Updated: December 2025*

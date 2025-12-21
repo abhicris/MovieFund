@@ -312,4 +312,4 @@ MovieFund is a fractional movie investment platform that enables individuals to 
 
 ---
 
-*Last Updated: 2024*
+*Last Updated: December 2025*
