@@ -8,7 +8,7 @@ export default function HowItWorks() {
     {
       number: "02",
       title: "Invest in Shares",
-      description: "Purchase fractional shares in movies that align with your investment goals. Minimum investment starts at ₹25,000 per share.",
+      description: "Purchase fractional shares in movies that align with your investment goals. Minimum investment starts at $300 per share.",
     },
     {
       number: "03",

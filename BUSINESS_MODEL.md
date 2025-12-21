@@ -178,7 +178,7 @@ MovieFund operates as a fractional movie investment platform that connects inves
 ### MovieFund Advantages
 
 1. **Accessibility**
-   - Low minimum investment (₹25,000)
+   - Low minimum investment ($300)
    - Fractional ownership model
    - Democratized access to movie investment
 
@@ -315,21 +315,21 @@ MovieFund operates as a fractional movie investment platform that connects inves
 
 ### Year 1
 - Movies funded: 15-20
-- Total capital raised: ₹50-75 crores
+- Total capital raised: $6-9 million
 - Investors: 500-750
-- Revenue: ₹3-5 crores
+- Revenue: $360K-600K
 
 ### Year 2
 - Movies funded: 30-40
-- Total capital raised: ₹150-200 crores
+- Total capital raised: $18-24 million
 - Investors: 2,000-3,000
-- Revenue: ₹12-18 crores
+- Revenue: $1.4-2.2 million
 
 ### Year 3
 - Movies funded: 60-80
-- Total capital raised: ₹400-500 crores
+- Total capital raised: $48-60 million
 - Investors: 5,000-7,500
-- Revenue: ₹35-50 crores
+- Revenue: $4.2-6 million
 
 ---
 

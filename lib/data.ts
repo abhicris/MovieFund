@@ -2,31 +2,29 @@ import { Movie, PlatformStats } from "@/types";
 
 // Mock platform statistics
 export const platformStats: PlatformStats = {
-  totalAmountRaised: 125000000, // ₹12.5cr
+  totalAmountRaised: 1500000, // $1.5M
   totalInvestors: 450,
-  totalReturnsEarned: 145000000, // ₹14.5cr
-  assetsUnderManagement: 150000000, // ₹15cr
+  totalReturnsEarned: 1750000, // $1.75M
+  assetsUnderManagement: 1800000, // $1.8M
   moviesFunded: 18,
   moviesReleased: 12,
 };
 
 // Helper function to format currency
 export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("en-IN", {
+  return new Intl.NumberFormat("en-US", {
     style: "currency",
-    currency: "INR",
+    currency: "USD",
     maximumFractionDigits: 0,
   }).format(amount);
 }
 
 // Helper function to format large numbers
 export function formatLargeNumber(amount: number): string {
-  if (amount >= 10000000) {
-    return `₹${(amount / 10000000).toFixed(1)}cr`;
-  } else if (amount >= 100000) {
-    return `₹${(amount / 100000).toFixed(1)}L`;
+  if (amount >= 1000000) {
+    return `$${(amount / 1000000).toFixed(1)}M`;
   } else if (amount >= 1000) {
-    return `₹${(amount / 1000).toFixed(1)}K`;
+    return `$${(amount / 1000).toFixed(1)}K`;
   }
   return formatCurrency(amount);
 }
@@ -78,10 +76,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Cinema Dreams Entertainment",
     genre: ["thriller", "drama"],
     language: "hindi",
-    budget: 25000000,
+    budget: 300000,
     totalShares: 1000,
     availableShares: 350,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 35.5,
     images: [
       "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200",
@@ -93,10 +91,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-06-15"),
     status: "post-production",
     revenueProjection: {
-      boxOffice: 45000000,
-      streaming: 18000000,
-      distribution: 12000000,
-      total: 75000000,
+      boxOffice: 540000,
+      streaming: 217000,
+      distribution: 145000,
+      total: 902000,
     },
     returnsProjection: {
       year1: 35,
@@ -105,8 +103,8 @@ export const mockMovies: Movie[] = [
       year4: 140,
       year5: 175,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 2500000,
+    minimumInvestment: 300,
+    maximumInvestment: 30000,
     createdAt: new Date("2024-08-01"),
     updatedAt: new Date("2024-11-15"),
   },
@@ -119,10 +117,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Urban Films",
     genre: ["drama", "romance"],
     language: "hindi",
-    budget: 18000000,
+    budget: 217000,
     totalShares: 720,
     availableShares: 180,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 42.8,
     images: [
       "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1200",
@@ -134,10 +132,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-03-20"),
     status: "production",
     revenueProjection: {
-      boxOffice: 38000000,
-      streaming: 15000000,
-      distribution: 10000000,
-      total: 63000000,
+      boxOffice: 458000,
+      streaming: 181000,
+      distribution: 120000,
+      total: 759000,
     },
     returnsProjection: {
       year1: 42,
@@ -146,8 +144,8 @@ export const mockMovies: Movie[] = [
       year4: 171,
       year5: 214,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 1800000,
+    minimumInvestment: 300,
+    maximumInvestment: 21700,
     createdAt: new Date("2024-09-15"),
     updatedAt: new Date("2024-11-20"),
   },
@@ -160,10 +158,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Comedy Central Pictures",
     genre: ["comedy"],
     language: "hindi",
-    budget: 15000000,
+    budget: 181000,
     totalShares: 600,
     availableShares: 250,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 38.2,
     images: [
       "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200",
@@ -175,10 +173,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-05-10"),
     status: "pre-production",
     revenueProjection: {
-      boxOffice: 32000000,
-      streaming: 12000000,
-      distribution: 8000000,
-      total: 52000000,
+      boxOffice: 386000,
+      streaming: 145000,
+      distribution: 96000,
+      total: 627000,
     },
     returnsProjection: {
       year1: 38,
@@ -187,8 +185,8 @@ export const mockMovies: Movie[] = [
       year4: 152,
       year5: 190,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 1500000,
+    minimumInvestment: 300,
+    maximumInvestment: 18100,
     createdAt: new Date("2024-10-01"),
     updatedAt: new Date("2024-11-10"),
   },
@@ -201,10 +199,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Cosmic Films International",
     genre: ["sci-fi", "thriller"],
     language: "english",
-    budget: 85000000,
+    budget: 1024000,
     totalShares: 3400,
     availableShares: 1200,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 32.5,
     images: [
       "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200",
@@ -216,10 +214,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-12-25"),
     status: "production",
     revenueProjection: {
-      boxOffice: 180000000,
-      streaming: 75000000,
-      distribution: 50000000,
-      total: 305000000,
+      boxOffice: 2170000,
+      streaming: 904000,
+      distribution: 602000,
+      total: 3676000,
     },
     returnsProjection: {
       year1: 32,
@@ -228,8 +226,8 @@ export const mockMovies: Movie[] = [
       year4: 130,
       year5: 162,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 8500000,
+    minimumInvestment: 300,
+    maximumInvestment: 102400,
     createdAt: new Date("2024-07-01"),
     updatedAt: new Date("2024-11-25"),
   },
@@ -242,10 +240,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Regional Cinema Collective",
     genre: ["drama"],
     language: "tamil",
-    budget: 12000000,
+    budget: 145000,
     totalShares: 480,
     availableShares: 200,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 45.3,
     images: [
       "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200",
@@ -257,10 +255,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-04-15"),
     status: "post-production",
     revenueProjection: {
-      boxOffice: 28000000,
-      streaming: 11000000,
-      distribution: 7000000,
-      total: 46000000,
+      boxOffice: 337000,
+      streaming: 133000,
+      distribution: 84000,
+      total: 554000,
     },
     returnsProjection: {
       year1: 45,
@@ -269,8 +267,8 @@ export const mockMovies: Movie[] = [
       year4: 180,
       year5: 225,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 1200000,
+    minimumInvestment: 300,
+    maximumInvestment: 14500,
     createdAt: new Date("2024-08-20"),
     updatedAt: new Date("2024-11-18"),
   },
@@ -283,10 +281,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Horror House Studios",
     genre: ["horror", "thriller"],
     language: "hindi",
-    budget: 8000000,
+    budget: 96000,
     totalShares: 320,
     availableShares: 150,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 40.7,
     images: [
       "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200",
@@ -298,10 +296,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-10-31"),
     status: "pre-production",
     revenueProjection: {
-      boxOffice: 20000000,
-      streaming: 8000000,
-      distribution: 5000000,
-      total: 33000000,
+      boxOffice: 241000,
+      streaming: 96000,
+      distribution: 60000,
+      total: 397000,
     },
     returnsProjection: {
       year1: 40,
@@ -310,8 +308,8 @@ export const mockMovies: Movie[] = [
       year4: 162,
       year5: 203,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 800000,
+    minimumInvestment: 300,
+    maximumInvestment: 9600,
     createdAt: new Date("2024-09-10"),
     updatedAt: new Date("2024-11-12"),
   },
@@ -324,10 +322,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Animation Studios India",
     genre: ["animation", "fantasy"],
     language: "hindi",
-    budget: 35000000,
+    budget: 422000,
     totalShares: 1400,
     availableShares: 600,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 36.8,
     images: [
       "https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=1200",
@@ -339,10 +337,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-08-15"),
     status: "production",
     revenueProjection: {
-      boxOffice: 65000000,
-      streaming: 25000000,
-      distribution: 15000000,
-      total: 105000000,
+      boxOffice: 783000,
+      streaming: 301000,
+      distribution: 181000,
+      total: 1265000,
     },
     returnsProjection: {
       year1: 36,
@@ -351,8 +349,8 @@ export const mockMovies: Movie[] = [
       year4: 147,
       year5: 184,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 3500000,
+    minimumInvestment: 300,
+    maximumInvestment: 42200,
     createdAt: new Date("2024-06-15"),
     updatedAt: new Date("2024-11-22"),
   },
@@ -365,10 +363,10 @@ export const mockMovies: Movie[] = [
     productionCompany: "Romance Films",
     genre: ["romance", "drama"],
     language: "hindi",
-    budget: 22000000,
+    budget: 265000,
     totalShares: 880,
     availableShares: 0,
-    pricePerShare: 25000,
+    pricePerShare: 300,
     projectedROI: 41.5,
     images: [
       "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1200",
@@ -380,10 +378,10 @@ export const mockMovies: Movie[] = [
     releaseDate: new Date("2025-02-14"),
     status: "fully_funded",
     revenueProjection: {
-      boxOffice: 42000000,
-      streaming: 17000000,
-      distribution: 11000000,
-      total: 70000000,
+      boxOffice: 506000,
+      streaming: 205000,
+      distribution: 133000,
+      total: 844000,
     },
     returnsProjection: {
       year1: 41,
@@ -392,8 +390,8 @@ export const mockMovies: Movie[] = [
       year4: 166,
       year5: 207,
     },
-    minimumInvestment: 25000,
-    maximumInvestment: 2200000,
+    minimumInvestment: 300,
+    maximumInvestment: 26500,
     createdAt: new Date("2024-05-01"),
     updatedAt: new Date("2024-10-30"),
   },

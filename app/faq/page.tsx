@@ -9,7 +9,7 @@ export default function FAQPage() {
     },
     {
       question: "What is the minimum investment?",
-      answer: "The minimum investment is typically ₹25,000 per share. Some movies may have different minimum investment requirements.",
+      answer: "The minimum investment is typically $300 per share. Some movies may have different minimum investment requirements.",
     },
     {
       question: "How do I earn returns?",

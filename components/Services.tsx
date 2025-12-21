@@ -14,7 +14,7 @@ export default function Services() {
     },
     {
       title: "Low Entry Barrier",
-      description: "Start investing with as little as ₹25,000. Fractional ownership makes movie investment accessible to everyone.",
+      description: "Start investing with as little as $300. Fractional ownership makes movie investment accessible to everyone.",
     },
   ];
 
