@@ -33,12 +33,14 @@ export default function Header() {
             >
               FAQ
             </Link>
-            <Link
-              href="/docs"
+            <a
+              href="https://docs.moviebitfund.kcolbchain.com"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-sm font-light text-black hover:text-green-600 transition-colors tracking-wide"
             >
               Docs
-            </Link>
+            </a>
             <Link
               href="/invest"
               className="bg-black text-white px-6 py-2 text-sm font-light tracking-wide hover:bg-green-600 transition-colors"

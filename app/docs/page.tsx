@@ -1,6 +1,10 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Link from "next/link";
+import { redirect } from 'next/navigation';
+
+export default function DocsPage() {
+  // Redirect to Docusaurus docs site
+  // Update this URL once docs site is deployed
+  redirect('https://docs.moviebitfund.kcolbchain.com');
+}
 
 type DocItem = 
   | {
