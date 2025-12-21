@@ -2,8 +2,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 
+type DocItem = 
+  | {
+      title: string;
+      description: string;
+      file: string;
+      icon: string;
+    }
+  | {
+      title: string;
+      description: string;
+      file: null;
+      icon: string;
+      external: boolean;
+      link: string;
+      comingSoon?: boolean;
+    };
+
 export default function DocsPage() {
-  const docs = [
+  const docs: Array<{
+    category: string;
+    items: DocItem[];
+  }> = [
     {
       category: "Business & Strategy",
       items: [
@@ -83,11 +103,11 @@ export default function DocsPage() {
       items: [
         {
           title: "Investor Deck",
-          description: "Pitch deck and presentation for seed round investors. Link to Gamma presentation.",
+          description: "Pitch deck and presentation for seed round investors. Link to Gamma presentation will be added here.",
           file: null,
           icon: "📊",
           external: true,
-          link: "#", // Will be updated when Gamma link is available
+          link: "#", // Update this link when Gamma presentation is ready
           comingSoon: true,
         },
       ],
@@ -127,12 +147,12 @@ export default function DocsPage() {
                       <p className="text-sm text-gray-600 font-light mb-4 leading-relaxed">
                         {doc.description}
                       </p>
-                      {doc.comingSoon ? (
+                      {'comingSoon' in doc && doc.comingSoon ? (
                         <div className="flex items-center gap-2">
                           <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
                             Coming Soon
                           </span>
-                          {doc.link && doc.link !== "#" && (
+                          {'link' in doc && doc.link && doc.link !== "#" && (
                             <a
                               href={doc.link}
                               target="_blank"
@@ -143,9 +163,9 @@ export default function DocsPage() {
                             </a>
                           )}
                         </div>
-                      ) : doc.external ? (
+                      ) : 'external' in doc && doc.external ? (
                         <a
-                          href={doc.link}
+                          href={'link' in doc ? doc.link : '#'}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-sm text-green-600 hover:text-green-700 font-light inline-flex items-center gap-1"
@@ -153,12 +173,14 @@ export default function DocsPage() {
                           View Document →
                         </a>
                       ) : (
-                        <Link
-                          href={`/docs/${doc.file.replace(".md", "")}`}
+                        <a
+                          href={`https://github.com/abhicris/MovieFund/blob/main/${'file' in doc && doc.file ? doc.file : ''}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="text-sm text-green-600 hover:text-green-700 font-light inline-flex items-center gap-1"
                         >
-                          View Document →
-                        </Link>
+                          View on GitHub →
+                        </a>
                       )}
                     </div>
                   </div>
