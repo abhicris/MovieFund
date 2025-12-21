@@ -19,6 +19,7 @@ A modern alternative investment platform for fractional ownership of movies. Inv
 - **Styling**: Tailwind CSS
 - **UI Components**: Custom React components
 - **Charts**: Recharts for data visualization
+- **Movie Data**: TMDB API (optional, free) - See [TMDB_SETUP.md](./TMDB_SETUP.md)
 
 ## Getting Started
 

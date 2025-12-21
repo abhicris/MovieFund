@@ -1,6 +1,7 @@
 // TMDB API integration for movie data
 // Free API: https://www.themoviedb.org/documentation/api
 
+// TMDB API Key - Get free key from https://www.themoviedb.org/settings/api
 const TMDB_API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY || '';
 const TMDB_BASE_URL = 'https://api.themoviedb.org/3';
 const TMDB_IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
