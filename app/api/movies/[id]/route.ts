@@ -79,10 +79,10 @@ export async function GET(
       if (user.role === 'investor') {
         const investment = await queryOne<{
           id: string;
-          lots: number;
-          total_amount: number;
+          lots: string | number;
+          total_amount: string | number;
           status: string;
-          returns_earned: number;
+          returns_earned: string | number;
         }>(
           `SELECT id, lots, total_amount, status, returns_earned 
            FROM investments 
@@ -93,10 +93,10 @@ export async function GET(
         if (investment) {
           movieData.userInvestment = {
             id: investment.id,
-            lots: parseInt(investment.lots),
-            totalAmount: parseFloat(investment.total_amount),
+            lots: typeof investment.lots === 'string' ? parseInt(investment.lots, 10) : investment.lots,
+            totalAmount: typeof investment.total_amount === 'string' ? parseFloat(investment.total_amount) : investment.total_amount,
             status: investment.status,
-            returnsEarned: parseFloat(investment.returns_earned),
+            returnsEarned: typeof investment.returns_earned === 'string' ? parseFloat(investment.returns_earned) : investment.returns_earned,
           };
         }
 
