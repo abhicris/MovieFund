@@ -155,7 +155,7 @@ export default function PortfolioPage() {
                 {investment.returnsEarned > 0 && (
                   <div className="border-t border-black pt-4 mt-4">
                     <div className="text-sm font-light text-black">
-                      <span className="opacity-70">Total Returns Earned:</span>{' ' '}
+                      <span className="opacity-70">Total Returns Earned:</span>{' '}
                       <span className="text-green-600 font-medium">
                         {formatCurrency(investment.returnsEarned)}
                       </span>
