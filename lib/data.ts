@@ -8,6 +8,9 @@ export const platformStats: PlatformStats = {
   assetsUnderManagement: 1800000, // $1.8M
   moviesFunded: 18,
   moviesReleased: 12,
+  filmPlansSubmitted: 45,
+  filmPlansApproved: 18,
+  producersRegistered: 32,
 };
 
 // Helper function to format currency
