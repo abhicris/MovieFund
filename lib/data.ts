@@ -133,8 +133,8 @@ export const mockMovies: Movie[] = [
     pricePerLot: calculateLotPrice(35000000), // $35,000 per lot
     projectedROI: 42.2,
     images: [
-      "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1280&q=80",
-      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1280&q=80",
+      "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1200",
+      "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1200",
     ],
     poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80",
     description: "An action-packed entertainer featuring Salman Khan in a dual role, marking his collaboration with director A.R. Murugadoss. A high-stakes thriller with intense action sequences.",

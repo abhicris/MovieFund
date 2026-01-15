@@ -411,3 +411,12 @@ Investor Return = (Investment Amount / Total Movie Budget) × Revenue Share × T
 ---
 
 *Last Updated: December 2025*
+
+
+
+
+
+
+
+
+

@@ -8,3 +8,12 @@ cd ..
 # Copy build output to public/docs for Next.js to serve
 mkdir -p public/docs
 cp -r docs-site/build/* public/docs/
+
+
+
+
+
+
+
+
+

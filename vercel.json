@@ -1,6 +1,9 @@
 {
-  "buildCommand": "npm run build:all",
+  "buildCommand": "npm run build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "regions": ["bom1"]
+  "regions": ["iad1"],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

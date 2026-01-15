@@ -98,3 +98,12 @@ TMDB API has generous rate limits:
 ---
 
 *Note: This integration is optional. The platform works perfectly fine with mock data if you don't want to set up TMDB API.*
+
+
+
+
+
+
+
+
+

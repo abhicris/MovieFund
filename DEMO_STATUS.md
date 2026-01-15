@@ -122,3 +122,12 @@ When building the backend, we'll add:
 ---
 
 *This demo version is stable and ready for showcasing. Backend and movie submission features will be built in the next phase.*
+
+
+
+
+
+
+
+
+
