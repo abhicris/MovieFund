@@ -49,7 +49,10 @@ export async function query<T = any>(
       console.log('Slow query:', { text, duration, rows: res.rowCount });
     }
     
-    return res;
+    return {
+      rows: res.rows,
+      rowCount: res.rowCount ?? 0,
+    };
   } catch (error) {
     console.error('Database query error:', error);
     throw error;
