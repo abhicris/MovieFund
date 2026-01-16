@@ -24,23 +24,25 @@ export function getDbPool(): Pool {
     }
 
     // Determine SSL configuration
-    // Supabase and most cloud databases require SSL
-    // Always enable SSL for production or external databases
+    // Supabase connection strings already include sslmode=require
+    // We need to ensure SSL is properly configured for the pg library
     const isLocalhost = connectionString.includes('localhost') || connectionString.includes('127.0.0.1');
-    const isProduction = process.env.NODE_ENV === 'production';
-    const isSupabase = connectionString.includes('supabase.co');
+    const isSupabase = 
+      connectionString.includes('supabase.co') || 
+      connectionString.includes('pooler.supabase.com') ||
+      connectionString.includes('supa=base');
     const isCloudDB = 
       connectionString.includes('vercel-storage.com') ||
       connectionString.includes('neon.tech') ||
-      connectionString.includes('railway.app') ||
-      connectionString.includes('.com') || // Any external domain
-      connectionString.includes('.net') ||
-      connectionString.includes('.io');
+      connectionString.includes('railway.app');
+    const hasSSLMode = connectionString.includes('sslmode=');
+    const isProduction = process.env.NODE_ENV === 'production';
 
-    // For Supabase, cloud databases, or production, always use SSL
-    // Set rejectUnauthorized: false to handle self-signed certificates in certificate chains
-    // This is safe for managed databases like Supabase
-    const sslConfig = (!isLocalhost && (isSupabase || isCloudDB || isProduction)) ? {
+    // For Supabase (which always requires SSL), cloud databases, or production:
+    // Always set SSL config with rejectUnauthorized: false
+    // This handles self-signed certificates in certificate chains
+    // Even if connection string has sslmode=require, we need to set the SSL object
+    const sslConfig = (!isLocalhost && (isSupabase || isCloudDB || hasSSLMode || isProduction)) ? {
       rejectUnauthorized: false
     } : false;
 
