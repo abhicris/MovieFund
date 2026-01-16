@@ -23,9 +23,22 @@ export function getDbPool(): Pool {
       );
     }
 
+    // Determine SSL configuration
+    // Supabase and most cloud databases require SSL in production
+    // Check if connection string already has SSL parameters
+    const requiresSSL = 
+      process.env.NODE_ENV === 'production' || 
+      connectionString.includes('supabase.co') ||
+      connectionString.includes('vercel-storage.com') ||
+      connectionString.includes('sslmode=require');
+
     pool = new Pool({
       connectionString,
-      ssl: process.env.NODE_ENV === 'production' ? { rejectUnauthorized: false } : false,
+      // For Supabase and production databases, use SSL with relaxed certificate validation
+      // This handles self-signed certificates in certificate chains
+      ssl: requiresSSL ? { 
+        rejectUnauthorized: false 
+      } : false,
       max: 20, // Maximum number of clients in the pool
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 2000,
