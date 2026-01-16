@@ -37,14 +37,25 @@ export function getDbPool(): Pool {
     const isProduction = process.env.NODE_ENV === 'production';
     const isExternal = !isLocalhost && (connectionString.includes('.com') || connectionString.includes('.net') || connectionString.includes('.io'));
 
-    // Clean connection string - remove sslmode parameter to avoid conflicts
+    // Clean connection string - remove only sslmode parameter to avoid conflicts
     // We'll handle SSL entirely through Pool config
+    // Keep other parameters like supa=base-pooler.x
     let cleanConnectionString = connectionString;
-    if (cleanConnectionString.includes('?sslmode=')) {
-      cleanConnectionString = cleanConnectionString.replace(/[?&]sslmode=[^&]*/g, '');
-    }
-    if (cleanConnectionString.includes('&sslmode=')) {
+    // Remove sslmode parameter but preserve other query parameters
+    // Handle: ?sslmode=require&supa=base-pooler.x -> ?supa=base-pooler.x
+    if (cleanConnectionString.includes('sslmode=')) {
+      // Remove ?sslmode=value& or ?sslmode=value (end of string)
+      cleanConnectionString = cleanConnectionString.replace(/\?sslmode=[^&]*(&|$)/, (match, after) => {
+        // If there's a & after, replace with ? to keep the next param
+        // If it's the end, remove entirely
+        return after === '&' ? '?' : '';
+      });
+      // Remove &sslmode=value (if it's a later parameter)
       cleanConnectionString = cleanConnectionString.replace(/&sslmode=[^&]*/g, '');
+      // Clean up any ?& sequences (shouldn't happen but just in case)
+      cleanConnectionString = cleanConnectionString.replace(/\?&/g, '?');
+      // Remove trailing ? if no params remain
+      cleanConnectionString = cleanConnectionString.replace(/\?$/, '');
     }
 
     // For Supabase, cloud databases, external connections, or production:
