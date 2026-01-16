@@ -9,10 +9,18 @@ let pool: Pool | null = null;
 
 export function getDbPool(): Pool {
   if (!pool) {
-    const connectionString = process.env.DATABASE_URL;
+    // Vercel managed Supabase uses POSTGRES_URL, but also check DATABASE_URL
+    const connectionString = 
+      process.env.POSTGRES_URL || 
+      process.env.POSTGRES_PRISMA_URL || 
+      process.env.POSTGRES_URL_NON_POOLING ||
+      process.env.DATABASE_URL;
     
     if (!connectionString) {
-      throw new Error('DATABASE_URL environment variable is not set');
+      throw new Error(
+        'Database connection string not found. ' +
+        'Please set one of: DATABASE_URL, POSTGRES_URL, POSTGRES_PRISMA_URL, or POSTGRES_URL_NON_POOLING'
+      );
     }
 
     pool = new Pool({
