@@ -24,8 +24,7 @@ export function getDbPool(): Pool {
     }
 
     // Determine SSL configuration
-    // Supabase connection strings already include sslmode=require
-    // We need to ensure SSL is properly configured for the pg library
+    // Supabase connection strings include sslmode=require, but we handle SSL via Pool config
     const isLocalhost = connectionString.includes('localhost') || connectionString.includes('127.0.0.1');
     const isSupabase = 
       connectionString.includes('supabase.co') || 
@@ -35,19 +34,30 @@ export function getDbPool(): Pool {
       connectionString.includes('vercel-storage.com') ||
       connectionString.includes('neon.tech') ||
       connectionString.includes('railway.app');
-    const hasSSLMode = connectionString.includes('sslmode=');
     const isProduction = process.env.NODE_ENV === 'production';
+    const isExternal = !isLocalhost && (connectionString.includes('.com') || connectionString.includes('.net') || connectionString.includes('.io'));
 
-    // For Supabase (which always requires SSL), cloud databases, or production:
-    // Always set SSL config with rejectUnauthorized: false
-    // This handles self-signed certificates in certificate chains
-    // Even if connection string has sslmode=require, we need to set the SSL object
-    const sslConfig = (!isLocalhost && (isSupabase || isCloudDB || hasSSLMode || isProduction)) ? {
+    // Clean connection string - remove sslmode parameter to avoid conflicts
+    // We'll handle SSL entirely through Pool config
+    let cleanConnectionString = connectionString;
+    if (cleanConnectionString.includes('?sslmode=')) {
+      cleanConnectionString = cleanConnectionString.replace(/[?&]sslmode=[^&]*/g, '');
+    }
+    if (cleanConnectionString.includes('&sslmode=')) {
+      cleanConnectionString = cleanConnectionString.replace(/&sslmode=[^&]*/g, '');
+    }
+
+    // For Supabase, cloud databases, external connections, or production:
+    // Always use SSL with rejectUnauthorized: false to handle certificate chain issues
+    // This is necessary for Supabase pooler which uses self-signed certificates
+    const needsSSL = isSupabase || isCloudDB || isExternal || isProduction;
+    
+    const sslConfig = needsSSL ? {
       rejectUnauthorized: false
     } : false;
 
     pool = new Pool({
-      connectionString,
+      connectionString: cleanConnectionString,
       ssl: sslConfig,
       max: 20, // Maximum number of clients in the pool
       idleTimeoutMillis: 30000,
