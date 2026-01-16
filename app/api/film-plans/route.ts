@@ -178,7 +178,7 @@ export async function POST(request: NextRequest) {
     const result = await query<FilmPlan>(
       `INSERT INTO film_plans (
         producer_id, title, tagline, director, producer, production_company,
-        genre, language, budget, description, cast, release_date,
+        genre, language, budget, description, "cast", release_date,
         revenue_projection_box_office, revenue_projection_streaming,
         revenue_projection_distribution, revenue_projection_total,
         returns_projection_year1, returns_projection_year2, returns_projection_year3,

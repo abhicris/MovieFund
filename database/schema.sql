@@ -81,7 +81,7 @@ CREATE TABLE film_plans (
     budget DECIMAL(15, 2) NOT NULL CHECK (budget > 0),
     
     -- Cast & Release
-    cast TEXT[] NOT NULL, -- Array of cast member names
+    "cast" TEXT[] NOT NULL, -- Array of cast member names
     release_date DATE NOT NULL,
     
     -- Revenue Projections
@@ -176,7 +176,7 @@ CREATE TABLE movies (
     genre TEXT[] NOT NULL,
     language VARCHAR(50) NOT NULL,
     description TEXT NOT NULL,
-    cast TEXT[] NOT NULL,
+    "cast" TEXT[] NOT NULL,
     release_date DATE NOT NULL,
     
     -- Financial Information

@@ -186,7 +186,7 @@ export async function PUT(
       values.push(description);
     }
     if (cast !== undefined) {
-      updates.push(`cast = $${paramCount++}`);
+      updates.push(`"cast" = $${paramCount++}`);
       values.push(cast);
     }
     if (releaseDate !== undefined) {

@@ -54,7 +54,7 @@ export async function POST(
       const movieResult = await client.query(
       `INSERT INTO movies (
         film_plan_id, title, tagline, director, producer, production_company,
-        genre, language, description, cast, release_date, budget,
+        genre, language, description, "cast", release_date, budget,
         total_lots, available_lots, price_per_lot, projected_roi,
         minimum_investment, maximum_investment, images, poster,
         revenue_projection_box_office, revenue_projection_streaming,
