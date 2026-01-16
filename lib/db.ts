@@ -24,21 +24,29 @@ export function getDbPool(): Pool {
     }
 
     // Determine SSL configuration
-    // Supabase and most cloud databases require SSL in production
-    // Check if connection string already has SSL parameters
-    const requiresSSL = 
-      process.env.NODE_ENV === 'production' || 
-      connectionString.includes('supabase.co') ||
+    // Supabase and most cloud databases require SSL
+    // Always enable SSL for production or external databases
+    const isLocalhost = connectionString.includes('localhost') || connectionString.includes('127.0.0.1');
+    const isProduction = process.env.NODE_ENV === 'production';
+    const isSupabase = connectionString.includes('supabase.co');
+    const isCloudDB = 
       connectionString.includes('vercel-storage.com') ||
-      connectionString.includes('sslmode=require');
+      connectionString.includes('neon.tech') ||
+      connectionString.includes('railway.app') ||
+      connectionString.includes('.com') || // Any external domain
+      connectionString.includes('.net') ||
+      connectionString.includes('.io');
+
+    // For Supabase, cloud databases, or production, always use SSL
+    // Set rejectUnauthorized: false to handle self-signed certificates in certificate chains
+    // This is safe for managed databases like Supabase
+    const sslConfig = (!isLocalhost && (isSupabase || isCloudDB || isProduction)) ? {
+      rejectUnauthorized: false
+    } : false;
 
     pool = new Pool({
       connectionString,
-      // For Supabase and production databases, use SSL with relaxed certificate validation
-      // This handles self-signed certificates in certificate chains
-      ssl: requiresSSL ? { 
-        rejectUnauthorized: false 
-      } : false,
+      ssl: sslConfig,
       max: 20, // Maximum number of clients in the pool
       idleTimeoutMillis: 30000,
       connectionTimeoutMillis: 2000,
